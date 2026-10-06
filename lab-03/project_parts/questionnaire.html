@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Анкета користувача</title>
+</head>
+<body>
+  <form action="questionnaire.html" method="get">
+  <header style="margin-bottom: 10px;"><a href="../index.html">Повернутись на головну</a></header>
+  <main>
+    <fieldset>
+      <legend>Особиста інформація</legend>
+      <div>
+        <label for="fullname">Введіть ваше ім'я</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Ваш ПІБ" required tabindex="1">
+      </div>
+      <div style="margin-top: 10px;">
+        <label for="birthdate">Дата народження</label>
+        <input type="date" name="birthdate" id="birthdate" required tabindex="2">
+      </div>
+      <div>
+        <p style="margin-bottom: 5px;">Рівень освіти:</p>
+        <input type="radio" name="education" id="edu1" value="1" tabindex="3">
+        <label for="edu1">Середня</label>
+        <input type="radio" name="education" id="edu2" value="2" tabindex="4">
+        <label for="edu2">Бакалавр</label>
+        <input type="radio" name="education" id="edu3" value="3" tabindex="5">
+        <label for="edu3">Магістр</label>
+      </div>
+      <div>
+        <p style="margin-bottom: 5px;"  >Статус зайнятості:</p>
+        
+        <input type="radio" name="employment" id="emp1" value="1" tabindex="6">
+        <label for="emp1">Студент</label>
+        <input type="radio" name="employment" id="emp2" value="2" checked tabindex="7">
+        <label for="emp2">Працевлаштований</label>
+        <input type="radio" name="employment" id="emp3" value="3" tabindex="8">
+        <label for="emp3">Непрацевлаштований</label>
+      </div>
+      <div style="margin-top: 10px;">
+        <label for="city">Місто проживання:</label>
+        <input type="text" id="city" name="city" list="city-list" placeholder="Оберіть або введіть..." tabindex="9">
+        <datalist id="city-list">
+          <option value="Київ">
+          <option value="Львів">
+          <option value="Дніпро">
+          <option value="Чернівці">
+          <option value="Вінниця">
+          <option value="Одеса">
+        </datalist>
+      </div>
+      <div style="margin-top: 10px;">
+        <label for="country">Країна народження:</label>
+        <select id="country" name="country" tabindex="10">
+          <option value="1">Україна</option>
+          <option value="2">Польща</option>
+          <option value="3" selected>Німеччина</option>
+          <option value="4">Франція</option>
+          <option value="5">Іспанія</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset style="margin-top: 10px;">
+      <legend>Обліковий запис та контакти</legend>
+        <div style="margin-top: 10px;">
+          <label for="email">Електронна пошта:</label>
+          <input type="email" name="email" id="email" placeholder="example@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off" required tabindex="11">
+        </div>
+        <div style="margin-top: 10px;">
+          <label for="phone">Номер телефону:</label>
+          <input type="tel" id="phone" name="phone" value="+380" placeholder="+380XXXXXXXXX" required pattern="^\+380\d{9}$" title="Ваш номер телефону" tabindex="12">
+        </div>
+        <div style="margin-top: 10px;">
+          <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Пароль з 6 символів" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}" title="6 символів: хоча б одна цифра, одна велика та одна мала літера" tabindex="13">
+        </div>
+    </fieldset>
+    <fieldset style="margin-top: 10px;">
+      <legend>Вподобання та навички</legend>
+      <div>
+        <p>Іноземні мови:</p>
+        <input type="checkbox" id="lang1" name="languages" value="1" tabindex="14">
+        <label for="lang1">Англійська</label>
+        <input type="checkbox" id="lang2" name="languages" value="2" tabindex="15">
+        <label for="lang2">Німецька</label>
+        <input type="checkbox" id="lang3" name="languages" value="3" tabindex="16">
+        <label for="lang3">Французька</label>
+        <input type="checkbox" id="lang4" name="languages" value="4" tabindex="17">
+        <label for="lang4">Іспанська</label>
+      </div>
+      <div style="margin-top: 10px;">
+        <label for="hobbies">Ваші хобі (множинний вибір):</label>
+        <select id="hobbies" name="hobbies" multiple size="4" tabindex="18">
+          <option value="1">Спорт</option>
+          <option value="2">Читання</option>
+          <option value="3">Музика</option>
+          <option value="4">Подорожі</option>
+          <option value="5">Ігри</option>
+          <option value="6">Кулінарія</option>
+        </select>
+      </div>
+      <div style="margin-top: 10px;">
+        <label for="specialization">Спеціалізація:</label>
+          <select id="specialization" name="specialization" tabindex="19">
+            <optgroup label="Розробка">
+              <option value="frontend">Frontend</option>
+              <option value="backend">Backend</option>
+              <option value="qa">QA Engineer</option>
+            </optgroup>
+            <optgroup label="Маркетинг">
+              <option value="seo">SEO</option>
+              <option value="smm">SMM</option>
+              <option value="copywrite">Копірайтер</option>
+            </optgroup>
+            <optgroup label="Дизайн">
+              <option value="uiux">UI/UX</option>
+              <option value="graphic">Графічний</option>
+              <option value="3d">3D Дизайн</option>
+            </optgroup>
+            <optgroup label="Менеджмент">
+              <option value="pm">Project Manager</option>
+              <option value="hr">HR Manager</option>
+              <option value="ba">Business Analyst</option>
+            </optgroup>
+          </select>
+      </div>
+    </fieldset>
+    <fieldset style="margin-top: 10px;">
+      <legend>Додаткова інформація</legend>
+      <div>
+        <label for="bio">Про себе:</label><br>
+        <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Напишіть декілька слів про себе..." tabindex="20"></textarea>
+      </div>
+      <div style="margin-top: 10px;">
+        <label for="audio_files">Завантажте аудіофайли:</label>
+        <input type="file" id="audio_files" name="audio_files[]" accept="audio/*" multiple tabindex="21">
+      </div>
+      <div style="margin-top: 10px;">
+        <label for="video_files">Завантажте відеофайли:</label>
+        <input type="file" id="video_files" name="video_files[]" accept="video/*" multiple tabindex="22">
+      </div>
+    </fieldset>
+    <div>
+      <button type="submit" tabindex="23">Надіслати</button>
+      <button type="reset" tabindex="24">Очистити</button>
+    </div>
+    </form>
+  </main>
+  <footer></footer>
+</body>
+</html>
