@@ -1,0 +1,33 @@
+.green{
+    color: green;
+}
+.purple{
+    color: purple;
+}
+.marked{
+    list-style: none;
+}
+.marked::before{
+    content: "✔";
+    margin-right: 5px;
+}
+.unmarked{
+    list-style: none;
+}
+.unmarked::before{
+    content: none;
+    margin-right: 5px;
+}
+.ulul{
+    padding-left: 22px;
+}
+.notunderline{
+    text-decoration: none;
+}
+.checked{
+    list-style: none;
+}
+.checked::before{
+    content: "•";
+    margin-right: 5px;
+}
