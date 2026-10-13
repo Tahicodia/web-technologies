@@ -1,0 +1,59 @@
+/* span всередині p.text-background через комбінатор нащадків класу та тегу */
+.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* span всередині .text-background всередині div через комбінатор нащадків тегу, класу та тегу */
+div .text-background span {
+    background-color: yellow;
+}
+
+/* span всередині інших span через комбінатор нащадків двох тегів */
+span span {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+/* span всередині span всередині ol (нумерованого списку) через комбінатор нащадків трьох тегів */
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* p на першому рівні вкладеності в section через комбінатор дочірнього елементу двох тегів */
+section > p {
+    text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.5);
+    text-indent: 50px;
+}
+
+/* ul безпосередньо в li через комбінатор дочірнього елементу двох тегів */
+li > ul {
+    list-style-type: square;
+}
+
+/* p.text-background на першому рівні вкладеності в div через комбінатор дочірнього елементу тегу та класу */
+div > .text-background {
+    word-spacing: 50px;
+}
+
+/* p на першому рівні вкладеності в .text-bold через комбінатор дочірнього елементу класу та тегу */
+.text-bold > p {
+    font-weight: bold;
+}
+
+/* p на першому рівні вкладеності в section, яка є прямим нащадком .text-bold, через комбінатор дочірнього елементу класу та двох тегів */
+.text-bold > section > p {
+    line-height: 45px;
+}
+
+/* p відразу ж за img (сусіди-сиблінги) через комбінатор наступного сусіднього елемента одного рівня двох тегів */
+img + p {
+    background-color: brown;
+}
+
+/* p після section на тому ж рівні вкладеності через комбінатор всіх сусідніх елементів одного рівня двох тегів */
+section ~ p {
+    color: red;
+}
