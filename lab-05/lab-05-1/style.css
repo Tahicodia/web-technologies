@@ -1,0 +1,83 @@
+div {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+li {
+    background-repeat: no-repeat;
+}
+.level1 > li {
+    background-color: rgb(103, 158, 128);
+    padding-right: 20px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    background-size: 30px 30px;
+    background-position: 10px 0;
+}
+.level2 {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.level2 > li {
+    background-color: rgb(153, 180, 102);
+    margin-bottom: 10px;
+    padding-left: 40px;
+    background-size: 35px 35px;
+    background-position: 5px center;
+}
+span {
+    padding: 10px 20px;
+    display: inline-block;
+}
+.level1 > li > span {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+.level2 span {
+    background-color: rgb(218, 106, 32);
+}
+.checklist{
+    background-image: url('./img/list.png');
+}
+.route{
+    background-image: url("./img/phone.png");
+}
+.plane{
+    background-image: url("./img/airplane.png");
+}
+.hotel{
+    background-image: url("./img/hotel.png");
+}
+.car{
+    background-image: url("./img/rental.png");
+}
+.bar{
+    background-image: url("./img/bar.png");
+}
+.casino{
+    background-image: url("./img/casino.png");
+}
+.museum{
+    background-image: url("./img/museum.png");
+}
+.festival{
+    background-image: url("./img/festival.png");
+}
