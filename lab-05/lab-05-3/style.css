@@ -1,0 +1,18 @@
+header {
+    margin-bottom: 10px;
+}
+
+/* Відступ між групами полів (fieldset) */
+fieldset + fieldset {
+    margin-top: 10px;
+}
+
+/* Поле форми з відступом зверху */
+.field {
+    margin-top: 10px;
+}
+
+/* Заголовки груп радіокнопок */
+.group-title {
+    margin-bottom: 5px;
+}
