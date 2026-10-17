@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 10px;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    white-space: normal;
+    vertical-align: top;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Блок 1: діагональні смуги двох відтінків одного кольору */
+div:nth-of-type(1) {
+    background-image: linear-gradient(45deg, #33bbf1 50%, #1f8ab8 50%);
+    background-size: 40px 40px;
+}
+
+/* Блок 2: клітинки з двох градієнтів, що перетинаються під прямим кутом */
+div:nth-of-type(2) {
+    background-color: #1f8ab8;
+    background-image:
+            linear-gradient(90deg, rgba(255, 255, 255, 0.3) 50%, transparent 50%),
+            linear-gradient(0deg, #33bbf1 50%, transparent 50%);
+    background-size: 40px 40px;
+}
+
+/* Блок 3: радіальний градієнт з початком у точці 30px 20px */
+div:nth-of-type(3) {
+    background-image: radial-gradient(circle farthest-corner at 30px 20px,
+    #d6f3fd 0%, #33bbf1 40%, #0b3d5c 100%);
+}
+
+/* Блок 4: напівпрозорий градієнт поверх суцільного кольору */
+div:nth-of-type(4) {
+    background-color: #33bbf1;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+}
