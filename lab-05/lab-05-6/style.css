@@ -1,0 +1,102 @@
+body {
+    background-color: #1f242b;
+    background-image: url('./img/background.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container {
+    max-width: 900px;
+    min-height: 320px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: rgb(117 83 147 / 0.75);
+}
+/*
+Якщо ширина вікна браузера менша за 320px,
+контейнер не зменшиться менше за min-width: 320px.
+Тому він може виходити за межі вікна браузера,
+що призведе до появи горизонтальної прокрутки.
+*/
+.tag{
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline;
+    background-color: #98ecff;
+}
+/*
+Для елементів із display: inline властивості width і height
+не діють, оскільки рядкові елементи не дозволяють задавати
+власну ширину та висоту. Тому div відображаються в рядок,
+а їхні розміри залежать від вмісту.
+*/
+.block-tag{
+    display: block;
+    width: 150px;
+    background-color: #98ffc8;
+    margin: 5px;
+    border: 1px solid black;
+}
+.background-repeat{
+    height: 200px;
+    width: 400px;
+    background-image: url("./img/hammer.png");
+    background-repeat: no-repeat;
+}
+.repeat-x{
+    background-repeat: repeat-x;
+}
+.repeat-y{
+    background-repeat: repeat-y;
+}
+.space{
+    background-repeat: space;
+}
+.round{
+    background-repeat: round;
+}
+/*
+space — зображення повторюється без масштабування,
+а вільний простір рівномірно розподіляється між зображеннями.
+
+round — зображення повторюється так, щоб помістилася ціла
+кількість копій; за потреби їхній розмір змінюється.
+*/
+.background-size{
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    background-image: url("./img/belka.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px;
+}
+.contain{
+    background-size: contain;
+}
+.cover{
+    background-size: cover;
+}
+.text-box{
+    max-height: 150px;
+    overflow: auto;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    background-image: url("./img/belka.png");
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+}
+.scroll{
+    background-attachment: scroll;
+}
+.local{
+    background-attachment: local;
+}
+/*
+scroll — фон залишається нерухомим відносно самого блоку
+під час прокручування його вмісту.
+local — фон прокручується разом із вмістом усередині блоку.
+*/
