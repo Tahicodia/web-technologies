@@ -1,0 +1,54 @@
+div{
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    display: inline-block;
+    margin: 20px;
+}
+div:nth-child(1){
+    box-sizing: content-box;
+    background-color: #33bbf1;
+}
+div:nth-child(2){
+    box-sizing: border-box;
+    background-color: #f13333;
+}
+div:nth-child(3){
+    max-height: 80px;
+    overflow: visible;
+}
+div:nth-child(4){
+    max-height: 80px;
+    overflow: hidden;
+}
+div:nth-child(5){
+    max-height: 80px;
+    overflow: scroll;
+}
+div:nth-child(6){
+    max-height: 80px;
+    overflow: auto;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+
+}
+.hidden{
+    display: none;
+}
+/*
+  1. display: none — повністю вилучає елемент із макета сторінки.
+  2. visibility: hidden — робить елемент невидимим, але місце за ним зберігається
+  3. opacity: 0 — робить елемент повністю прозорим, зберігаючи його місце на екрані,
+     і при цьому елемент продовжує реагувати на кліки та події миші.
+*/
