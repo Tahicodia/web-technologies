@@ -1,0 +1,63 @@
+body{
+    font-size: 20px;
+}
+
+.bbox{
+    position: relative;
+    width: 660px;
+    height: 260px;
+}
+
+.box{
+    position: absolute;
+    box-sizing: border-box;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+    opacity: 0;
+    color: white;
+    transition: opasity 0.1s;
+}
+
+#block-1-1{
+    top: 190px;
+    left: 0;
+    width: 135px;
+    height: 60px;
+    padding-top: 12px;
+}
+#block-2-1{
+    top: 0;
+    left: 150px;
+    width: 500px;
+    height: 255px;
+    padding-top: 10px;
+}
+#block-1-2{
+    top: 200px;
+    left: 160px;
+    width: 135px;
+    height: 50px;
+    padding-top: 8px;
+    z-index: 2;
+}
+#block-2-2{
+    top: 0;
+    left: 0;
+    width: 135px;
+    height: 160px;
+    padding-top: 20px;
+}
+#block-1-1:hover + #block-2-1{
+    opacity: 1;
+}
+#block-1-2:hover + #block-2-2{
+    opacity: 1;
+}
