@@ -1,18 +1,147 @@
-header {
-    margin-bottom: 10px;
+:root {
+    --accent: #4f46e5;
+    --accent-dark: #4338ca;
+    --bg: #eef0f8;
+    --card: #ffffff;
+    --text: #1f2937;
+    --border: #d1d5db;
 }
 
-/* Відступ між групами полів (fieldset) */
-fieldset + fieldset {
-    margin-top: 10px;
+* {
+    box-sizing: border-box;
 }
 
-/* Поле форми з відступом зверху */
-.field {
-    margin-top: 10px;
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(135deg, #e0e7ff, var(--bg));
 }
 
-/* Заголовки груп радіокнопок */
-.group-title {
-    margin-bottom: 5px;
+main {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Блоки форми */
+fieldset {
+    margin: 0 0 20px;
+    padding: 20px 25px;
+    background: var(--card);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+legend {
+    padding: 6px 14px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border-radius: 20px;
+}
+
+fieldset > div {
+    margin-bottom: 16px;
+}
+
+/* Підписи */
+label {
+    font-size: 15px;
+}
+
+.field label,
+fieldset > div:first-of-type > label[for="fullname"],
+label[for="bio"] {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.group-title,
+fieldset p {
+    margin: 0 0 6px;
+    font-weight: 500;
+}
+
+/* Поля вводу */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Радіо та чекбокси в рядок */
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 0 0;
+    accent-color: var(--accent);
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+/* Кнопки */
+button {
+    padding: 12px 28px;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.send {
+    background: var(--accent);
+}
+
+.send:hover {
+    background: var(--accent-dark);
+}
+
+.clear {
+    margin-left: 10px;
+    background: #9ca3af;
+}
+
+.clear:hover {
+    background: #6b7280;
+}
+
+/* Підсвітка помилок після взаємодії */
+input:user-invalid {
+    border-color: #ef4444;
 }
