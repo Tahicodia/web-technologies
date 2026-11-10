@@ -57,3 +57,20 @@ body {
 .big img {
     flex: 1;
 }
+
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .big {
+        grid-column: auto;
+    }
+}
