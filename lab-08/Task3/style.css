@@ -19,15 +19,3 @@ body {
 .wide {
     grid-column: 1 / -1;
 }
-
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-}
